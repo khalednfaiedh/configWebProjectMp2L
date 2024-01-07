@@ -1,0 +1,80 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: ReportServiceApplication
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/report-db
+    username: data&&Admin1User_report
+    password: numeryx&&2019W
+    driver-class-name: org.postgresql.Driver
+
+
+server:
+  address: 0.0.0.0
+  port: 8007
+
+security:
+  oauth2:
+    resource:
+      id: report-service
+      jwt:
+        key-value: bael
+    client:
+      client-id: client_numeryx
+      client-secret: secret_numeryx
+      grant-type: password
+  jwt:
+    key-store-password: numeryx2020
+    key-pair-alias: num-oauth-jwt
+    key-pair-password: numeryx2020
+    public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArk5gHy9uIy0IGikp3ADWAn3wY5cms+6QTonWmeUmvKKR4Se37yar4HgNC02tClWtW1XObb8OsWzVnqggSPvBBik93OXXGl0wzDReVXRG2lJC4Y0I4OpUrEbZKK8FsrIifJvCheTBS9fBkjCnJCN+ZlsYHtyRoiKtPm5nHoHuqbIPSFVUUsH8DLYu7ZdxXQHsxp64PFPtfym3EjRX6eX4Kgmnt++b7a2bImFZMUQksVl++RKmS5K7vZqdxEVPMWlowP3ZjHd0F9VSjjxwcjv4qsnq5zZIp3UR/n7v6WSKGQ0p8JdwGYxqEBYRJIRyGy5rrSpZIoWRAuEX0CEFJwVhPwIDAQAB
+    private-key: MIIDgTCCAmmgAwIBAgIERMw49TANBgkqhkiG9w0BAQsFADBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwHhcNMTkxMjEwMTYwODUwWhcNMjAwMzA5MTYwODUwWjBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCuTmAfL24jLQgaKSncANYCffBjlyaz7pBOidaZ5Sa8opHhJ7fvJqvgeA0LTa0KVa1bVc5tvw6xbNWeqCBI+8EGKT3c5dcaXTDMNF5VdEbaUkLhjQjg6lSsRtkorwWysiJ8m8KF5MFL18GSMKckI35mWxge3JGiIq0+bmcege6psg9IVVRSwfwMti7tl3FdAezGnrg8U+1/KbcSNFfp5fgqCae375vtrZsiYVkxRCSxWX75EqZLkru9mp3ERU8xaWjA/dmMd3QX1VKOPHByO/iqyernNkindRH+fu/pZIoZDSnwl3AZjGoQFhEkhHIbLmutKlkihZEC4RfQIQUnBWE/AgMBAAGjITAfMB0GA1UdDgQWBBT0BnQSe7549w3fITUP+Tv7cCXSxDANBgkqhkiG9w0BAQsFAAOCAQEAganMuSSwnVboz3/Esrw7IR+aq2TXiPZ6Hd69Sg6Kq2m7qLxqnuDxGRwebTJdIDuKB0jZKmbITgw+rj1g8VA0B1qobeq48x2XlyNlooIdanP60Rag5rLiWGoK+XvvPUNV3CVfZjfLSEl5qCgZDWUcDALaA3qp7sSWsQZZYpw0FzJM4PXmQdZq9qTKoV0CBx+68230xiEvog6y7qBPl3ZUgIBJHdFzJXG0W5mLQX7rxhg6ZgBvsg8HZ4VoIbzxyVTvS4Sun4XIqabIGfLZKZ8D+xnBRbiJojlyxWzmceGZ7Sf31FnuoXdoH866ZE/92Uob7dc68+wcyFoK6mjC+kDuAA==
+minio:
+  client: C:/Users/Loua/Downloads/mc
+  endpoint: http://127.0.0.1:9001/
+  accessKey: newuser
+  secretKey: newuser123
+  run-config: session-sh
+  tmp-files: C:\Users\mumch\Desktop\stage\workspace\minio.minio.sys
+jsch:
+  session:
+    username: sss
+    host: 0.0.0.0
+    port: 2222
+    password: louabk
+    timeout: 60000
+logging:
+  pattern:
+    console: " %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+  level:
+    com.numeryx.minioaccess: DEBUG
+    org.springframework: INFO
+    org.hibernate: INFO
+    liquibase: INFO
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 50000
+        readTimeout: 50000
+        loggerLevel: basic
+      apis:
+        notification: http://localhost:8002
+config:
+  oauth2:
+    path-jks: C:/Windows/System32/drivers/etc/ssl/num-auth.jks
+servlet:
+  multipart:
+    max-file-size: 2MB
+    max-request-size: 2MB
+
+

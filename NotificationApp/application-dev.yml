@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+config:
+  oauth2:
+    accessTokenUri: http://localhost:9000/oauth/token
+  path-jks: C:\Windows\System32\drivers\etc\ssl\num-auth.jks
+context: http://localhost:4200/
+
+websocket:
+  relay-host: rabbitmq
+  relay-port: 61613
+  client-login: userNotif
+  client-passcode: ntf&&20NUMeRyX20
+
+
+LoadOrigins : http://localhost:4201,http://localhost:4200

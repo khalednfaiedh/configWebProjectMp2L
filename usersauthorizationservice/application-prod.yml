@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto:  create
+
+config:
+  oauth2:
+    accessTokenUri: https://int-ups.numeryx.
+
+
+
+
+
+
+    /api/auth/oauth/token
+  path-jks: /etc/ssl/num-auth.jks
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 50000
+        readTimeout: 50000
+        loggerLevel: basic
+      apis:
+        notification: https://int-ups.numeryx.fr/api/notification/
+
+LoadOrigins : http://localhost:4201,http://localhost:4200,http://localhost:8003

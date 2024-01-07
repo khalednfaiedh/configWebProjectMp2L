@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+config:
+  oauth2:
+    accessTokenUri: https://int-ups.numeryx.fr/api/auth/oauth/token
+  path-jks: /etc/ssl/num-auth.jks
+context: https://int-ups.numeryx.fr/#
+
+websocket:
+  relay-host: rabbitmq
+  relay-port: 61613
+  client-login: userWorkflowAndForms
+  client-passcode: ntf&&20NUMeRyX20

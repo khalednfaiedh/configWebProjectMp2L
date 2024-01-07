@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto:   update
+server:
+  address: 0.0.0.0
+  port: 9000
+
+config:
+  oauth2:
+    accessTokenUri: http://localhost:9000/oauth/token
+  path-jks: /etc/ssl/num-auth.jks
+
+LoadOrigins : http://localhost:4201,http://localhost:4200, http://localhost:8003
+
+hosts-url:
+  frontoffice: http://localhost:4201/
+  backoffice: http://localhost:4200/ 
+  develop: 'true'
+  origins: http://localhost:4200,http://localhost:4201,http://localhost:9000,http://localhost:8002,http://localhost:8003,http://localhost:8007,http://localhost:8008,http://localhost:9999,
+  swagger-api: http://localhost:9000,http://localhost:8002,http://localhost:8003,http://localhost:8007,http://localhost:8008
+
