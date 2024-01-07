@@ -5,14 +5,8 @@ spring:
 
 config:
   oauth2:
-    accessTokenUri: https://int-ups.numeryx.
 
-
-
-
-
-
-    /api/auth/oauth/token
+    accessTokenUri: https://int-ups.numeryx./api/auth/oauth/token
   path-jks: /etc/ssl/num-auth.jks
 
 feign:

@@ -40,7 +40,7 @@ security:
     private-key: MIIDgTCCAmmgAwIBAgIERMw49TANBgkqhkiG9w0BAQsFADBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwHhcNMTkxMjEwMTYwODUwWhcNMjAwMzA5MTYwODUwWjBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCuTmAfL24jLQgaKSncANYCffBjlyaz7pBOidaZ5Sa8opHhJ7fvJqvgeA0LTa0KVa1bVc5tvw6xbNWeqCBI+8EGKT3c5dcaXTDMNF5VdEbaUkLhjQjg6lSsRtkorwWysiJ8m8KF5MFL18GSMKckI35mWxge3JGiIq0+bmcege6psg9IVVRSwfwMti7tl3FdAezGnrg8U+1/KbcSNFfp5fgqCae375vtrZsiYVkxRCSxWX75EqZLkru9mp3ERU8xaWjA/dmMd3QX1VKOPHByO/iqyernNkindRH+fu/pZIoZDSnwl3AZjGoQFhEkhHIbLmutKlkihZEC4RfQIQUnBWE/AgMBAAGjITAfMB0GA1UdDgQWBBT0BnQSe7549w3fITUP+Tv7cCXSxDANBgkqhkiG9w0BAQsFAAOCAQEAganMuSSwnVboz3/Esrw7IR+aq2TXiPZ6Hd69Sg6Kq2m7qLxqnuDxGRwebTJdIDuKB0jZKmbITgw+rj1g8VA0B1qobeq48x2XlyNlooIdanP60Rag5rLiWGoK+XvvPUNV3CVfZjfLSEl5qCgZDWUcDALaA3qp7sSWsQZZYpw0FzJM4PXmQdZq9qTKoV0CBx+68230xiEvog6y7qBPl3ZUgIBJHdFzJXG0W5mLQX7rxhg6ZgBvsg8HZ4VoIbzxyVTvS4Sun4XIqabIGfLZKZ8D+xnBRbiJojlyxWzmceGZ7Sf31FnuoXdoH866ZE/92Uob7dc68+wcyFoK6mjC+kDuAA==
 minio:
   client: C:/Users/Loua/Downloads/mc
-  endpoint: http://127.0.0.1:9001/
+  endpoint: http://127.0.0.1:9002/
   accessKey: newuser
   secretKey: newuser123
   run-config: session-sh
@@ -74,7 +74,6 @@ config:
     path-jks: C:/Windows/System32/drivers/etc/ssl/num-auth.jks
 servlet:
   multipart:
-    max-file-size: 2MB
-    max-request-size: 2MB
-
+    max-file-size: 1GB
+    max-request-size: 1GB
 

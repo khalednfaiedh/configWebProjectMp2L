@@ -2,7 +2,7 @@ spring:
   application:
     name: AuthorzationServerApp
   profiles:
-    active: dev  
+    active: dev
 
   jpa:
     generate-ddl: true
@@ -18,12 +18,14 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/auth-db?ApplicationName=AuthorzationServerApp
     username: data&&Admin1User_aut
-    password: '{cipher}AQAkV4CERHm2TK9Mh+Hp8iq9tn3x75WIrzd3hT2ljInwLNkKdANkgZEbl8TA6B2w2tozkhDAnQtqWEpcvpy7QXiwxdyBIRdCT6vWI9ZW6VVKljEZhuAByQaV3yf+XU/XgT1mjyZoVfzYs5FOHGURT810rigJ0JGdRggmjetQDDrL8GGD5Ad5EOW8Q6WGrFncCOFbOXEWA7tkwVo7HTmOf1jVRCLiywC3rmobZpEJFm0fkNbVhH1I0nO7dcJ13SN9ZkWBtfpEI8haZYOELhjMorhNIOd9BzbGaaPBFZTc6MY019jdujTnSKmikyPSOzUW5mk7wjmwDJwBA3lM2+XvsLJZgZVt1EC6dqCKOx45Yly7O99cQDUyAeBznlp42n2JyJA'
+    password: 'numeryx&&2019W'
     driver-class-name: org.postgresql.Driver
+
 #  cloud:
 #    consul:
 #      discovery:
 #        fail-fast: false
+
   session:
     store-type: none
 
@@ -40,7 +42,7 @@ security:
       client-id: client_numeryx
       client-secret: secret_numeryx
       grant-type: password
-    tokenTimeout: 9000
+    tokenTimeout: 950400
     resource:
       id: authorization-service
   jwt:
@@ -59,6 +61,9 @@ ribbon:
 credentials:
   super-admin-user-login: super_admin@yopmail.com
   super-admin-user-password: numeryx2020
+config:
+  connector:
+    token: eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJpYW1pcmEiLCJhdXQiOiJBUFBMSUNBVElPTiIsImF1ZCI6ImRLYjZGNFp5U0dFS3I0YWJaQTZXMjNGVVBPTWEiLCJuYmYiOjE2OTUzNzEzNjgsImF6cCI6ImRLYjZGNFp5U0dFS3I0YWJaQTZXMjNGVVBPTWEiLCJzY29wZSI6ImRlZmF1bHQiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE2OTYwMDEzNjgsImlhdCI6MTY5NTM3MTM2OCwianRpIjoiNDRkNWExYmYtZjVmOC00YWUxLTgxNGQtNTBhMTJkODNhODY3In0.XQRtNMM40x4hhFWQbR1kR0bb_sLwZVlYUqdDg7Yz91H6N-xi8gYTldHgvyu4DXG1WEqorWhd0eTQjZtjSxvXDtoEEy6bBv6_i6_HqqVChl6ZjT92ZCg3Es42jzn2nUdg08Dp0dREUBmGag-Q8Qves4HDgueOU1dQ2eeywjCY10U9SMi_LD9lXgU0Ia1359Fv75ciiShkj93QH8AMvfsN04d9n6jx2dQLTyJ4DJVr66xvSpkp-09DDdd6SxKccl2_ldAjafAPDV0LbsLolGtxXXd9ACPfNZNWsKusVu1X8BDaBryQO4ieLLoGngOOwncVpVFZHJtqr8DM9FbtfKYUXA
 
 feign:
   client:

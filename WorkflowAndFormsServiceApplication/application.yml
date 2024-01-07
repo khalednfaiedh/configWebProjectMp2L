@@ -47,8 +47,17 @@ security:
     key-pair-password: numeryx2020
     public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArk5gHy9uIy0IGikp3ADWAn3wY5cms+6QTonWmeUmvKKR4Se37yar4HgNC02tClWtW1XObb8OsWzVnqggSPvBBik93OXXGl0wzDReVXRG2lJC4Y0I4OpUrEbZKK8FsrIifJvCheTBS9fBkjCnJCN+ZlsYHtyRoiKtPm5nHoHuqbIPSFVUUsH8DLYu7ZdxXQHsxp64PFPtfym3EjRX6eX4Kgmnt++b7a2bImFZMUQksVl++RKmS5K7vZqdxEVPMWlowP3ZjHd0F9VSjjxwcjv4qsnq5zZIp3UR/n7v6WSKGQ0p8JdwGYxqEBYRJIRyGy5rrSpZIoWRAuEX0CEFJwVhPwIDAQAB
     private-key: MIIDgTCCAmmgAwIBAgIERMw49TANBgkqhkiG9w0BAQsFADBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwHhcNMTkxMjEwMTYwODUwWhcNMjAwMzA5MTYwODUwWjBxMRAwDgYDVQQGEwd0dW5pc2lhMQ4wDAYDVQQIEwV0dW5pczEOMAwGA1UEBxMFdHVuaXMxGzAZBgNVBAoTEm51bWVyeXggaW5ub3ZhdGlvbjEQMA4GA1UECxMHbnVtZXJ5eDEOMAwGA1UEAxMFd2FsaWQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCuTmAfL24jLQgaKSncANYCffBjlyaz7pBOidaZ5Sa8opHhJ7fvJqvgeA0LTa0KVa1bVc5tvw6xbNWeqCBI+8EGKT3c5dcaXTDMNF5VdEbaUkLhjQjg6lSsRtkorwWysiJ8m8KF5MFL18GSMKckI35mWxge3JGiIq0+bmcege6psg9IVVRSwfwMti7tl3FdAezGnrg8U+1/KbcSNFfp5fgqCae375vtrZsiYVkxRCSxWX75EqZLkru9mp3ERU8xaWjA/dmMd3QX1VKOPHByO/iqyernNkindRH+fu/pZIoZDSnwl3AZjGoQFhEkhHIbLmutKlkihZEC4RfQIQUnBWE/AgMBAAGjITAfMB0GA1UdDgQWBBT0BnQSe7549w3fITUP+Tv7cCXSxDANBgkqhkiG9w0BAQsFAAOCAQEAganMuSSwnVboz3/Esrw7IR+aq2TXiPZ6Hd69Sg6Kq2m7qLxqnuDxGRwebTJdIDuKB0jZKmbITgw+rj1g8VA0B1qobeq48x2XlyNlooIdanP60Rag5rLiWGoK+XvvPUNV3CVfZjfLSEl5qCgZDWUcDALaA3qp7sSWsQZZYpw0FzJM4PXmQdZq9qTKoV0CBx+68230xiEvog6y7qBPl3ZUgIBJHdFzJXG0W5mLQX7rxhg6ZgBvsg8HZ4VoIbzxyVTvS4Sun4XIqabIGfLZKZ8D+xnBRbiJojlyxWzmceGZ7Sf31FnuoXdoH866ZE/92Uob7dc68+wcyFoK6mjC+kDuAA==
-
-
+camunda.bpm:
+  job-execution:
+    enabled: true
+    lock-time-in-millis: 5000
+    async-before: true
+    max-wait: 1000
+    max-jobs-per-acquisition: 500
+    core-pool-size: 100
+    max-pool-size: 100
+    queue-capacity: 1000
+  auto-deployment-enabled: true
 minio:
   client: C:/Users/Loua/Downloads/mc
   endpoint: http://127.0.0.1:9001/
@@ -90,6 +99,6 @@ config:
     path-jks: C:/Windows/System32/drivers/etc/ssl/num-auth.jks
 servlet:
   multipart:
-    max-file-size: 2MB
-    max-request-size: 2MB
+    max-file-size: 1GB
+    max-request-size: 1GB
 conditionExpression: isValid    
