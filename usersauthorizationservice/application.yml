@@ -18,7 +18,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/auth-db?ApplicationName=AuthorzationServerApp
     username: data&&Admin1User_aut
-    password: '{cipher}AQAkV4CERHm2TK9Mh+Hp8iq9tn3x75WIrzd3hT2ljInwLNkKdANkgZEbl8TA6B2w2tozkhDAnQtqWEpcvpy7QXiwxdyBIRdCT6vWI9ZW6VVKljEZhuAByQaV3yf+XU/XgT1mjyZoVfzYs5FOHGURT810rigJ0JGdRggmjetQDDrL8GGD5Ad5EOW8Q6WGrFncCOFbOXEWA7tkwVo7HTmOf1jVRCLiywC3rmobZpEJFm0fkNbVhH1I0nO7dcJ13SN9ZkWBtfpEI8haZYOELhjMorhNIOd9BzbGaaPBFZTc6MY019jdujTnSKmikyPSOzUW5mk7wjmwDJwBA3lM2+XvsLJZgZVt1EC6dqCKOx45Yly7O99cQDUyAeBznlp42n2JyJA'
+    password: numeryx&&2019W
     driver-class-name: org.postgresql.Driver
 #  cloud:
 #    consul:
